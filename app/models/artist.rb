@@ -19,7 +19,7 @@ class Artist
   end # Returns an array of all the galleries that an artist has paintings in
 
   def cities
-    galleries.map {|gallery| gallery.city}
+    galleries.map {|gallery| gallery.city}.uniq
   end # Return an array of all cities that an artist has paintings in
 
   def create_painting(title, price, gallery)
