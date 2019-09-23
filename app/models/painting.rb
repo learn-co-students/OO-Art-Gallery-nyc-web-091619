@@ -1,13 +1,17 @@
 class Painting
 
-  attr_reader :title, :price
+  attr_reader :title, :price, :artist, :gallery
 
   @@all = []
-  
+
   # Class methods
-  def initialize(title, price)
+  def initialize(artist, title, price, gallery)
+    @artist = artist
     @title = title
     @price = price
+    @gallery = gallery
+
+    @@all << self
   end
 
   def self.all
